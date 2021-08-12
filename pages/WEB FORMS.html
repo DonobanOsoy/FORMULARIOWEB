@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB FORMS</title>
+
+    <style> 
+            .row2cols{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+            }
+            .row2cols label{
+                background-color:black;    
+                color: white;
+                padding: 10px;
+                text-align: right;
+            }
+            .row2cols input,
+            .row2cols textarea{
+                background-color: azure;
+            }
+            input[type="submit"],
+            input[type="reset"]
+           {
+                background-color: darkgreen;
+                color: white;
+                font-size: 15px;
+                padding: 15px;
+            }
+            
+            /*media queri*/
+            @media screen and (max-width:600px) {
+                .row2cols{
+                    grid-template-columns: 1fr;
+                }
+                .row2cols label{
+                text-align: center;
+            }
+            }
+          
+    
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>Opiniones de nuestros usuarios</h1>
+    </header>
+
+    <form action="">
+
+        <fieldset>
+            
+            <legend>Registro de la opinion</legend>
+            <div class="row2cols">
+                <label for="nombre">Nombre</label>
+                <input type="text" 
+                id="nombre" 
+                name="nombre"
+                placeholder="Nombre Completo.."
+                required>
+            </div>
+
+            <div class="row2cols">
+                <label for="email">E-mail</label>
+                <input type="email"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Solo Direcciones Validas"
+                        required>
+            </div>
+
+            <div class="row2cols">
+                <label for="mensaje">Opiniones</label>
+                <textarea name="mensaje" 
+                           id="mensaje" 
+                           rows="10"
+                           minlength="25"
+                           required>
+                           
+                </textarea>
+            </div>
+
+            <div class="row2cols">
+                <div>
+
+                </div>
+              
+                <div>
+                    <input type="submit" value="Guardar">
+                <input type="reset" value="Limpiar Controles">
+                </div>
+                
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
